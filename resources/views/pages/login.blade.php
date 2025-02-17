@@ -3,11 +3,11 @@
 @section('content')
     <div class="w-screen h-screen flex flex-col justify-start items-center pt-20">
 
-        <form class="flex flex-col bg-white p-6 rounded-lg shadow-md w-full max-w-sm mx-auto space-y-4"
+        <form class="flex flex-col bg-gray-200 p-6 rounded-lg shadow-lg shadow-gray-300 w-full max-w-sm mx-auto space-y-4 border border-primary"
             action="{{ route('signin') }}" method="POST">
             @csrf
 
-            <h2 class="text-2xl font-bold text-dark text-center">Log in</h2>
+            <h2 class="text-2xl font-bold text-dark text-center">Log <span class="text-primary">in</span></h2>
 
             <div>
                 <label for="email" class="block text-sm font-medium text-gray-600">Email</label>
