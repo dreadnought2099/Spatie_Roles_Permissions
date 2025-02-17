@@ -7,22 +7,22 @@
             action="{{ route('signin') }}" method="POST">
             @csrf
 
-            <h2 class="text-2xl font-bold text-gray-700 text-center">Log in</h2>
+            <h2 class="text-2xl font-bold text-dark text-center">Log in</h2>
 
             <div>
                 <label for="email" class="block text-sm font-medium text-gray-600">Email</label>
-                <input type="email" id="email" name="email" required
-                    class="mt-1 w-full p-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 outline-none">
+                <input type="email" id="email" name="email" placeholder="Email" required
+                    class="mt-1 w-full p-2 border border-primary rounded-lg focus:ring-primary focus:border-primary outline-none">
             </div>
 
             <div>
                 <label for="password" class="block text-sm font-medium text-gray-600">Password</label>
-                <input type="password" id="password" name="password" required
-                    class="mt-1 w-full p-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 outline-none">
+                <input type="password" id="password" name="password" placeholder="Password" required
+                    class="mt-1 w-full p-2 border border-primary rounded-lg focus:ring-primary focus:border-primary outline-none">
             </div>
 
             <button type="submit"
-                class="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 rounded-lg transition duration-300">
+                class="w-full bg-primary hover:bg-gray-500 hover:text-white text-white font-medium py-2 rounded-lg transition duration-300">
                 Log in
             </button>
 
