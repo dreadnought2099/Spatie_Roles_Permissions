@@ -11,13 +11,13 @@
 
             <div>
                 <label for="email" class="block text-sm font-medium text-gray-600">Email</label>
-                <input type="email" id="email" name="email" placeholder="Email" required
+                <input type="email" id="email" name="email" placeholder="Email" required autocomplete="email"
                     class="mt-1 w-full p-2 border border-primary rounded-lg focus:ring-primary focus:border-primary outline-none">
             </div>
 
             <div>
                 <label for="password" class="block text-sm font-medium text-gray-600">Password</label>
-                <input type="password" id="password" name="password" placeholder="Password" required
+                <input type="password" id="password" name="password" placeholder="Password" required autocomplete="current-password"
                     class="mt-1 w-full p-2 border border-primary rounded-lg focus:ring-primary focus:border-primary outline-none">
             </div>
 
