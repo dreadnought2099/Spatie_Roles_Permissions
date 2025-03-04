@@ -1,12 +1,13 @@
 <?php
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ErrorController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
 Route::get('/', function (Request $request) {
-    if($request->header('HX-REQUEST')) {
+    if ($request->header('HX-REQUEST')) {
         return view('partials.home-content');
     }
     return view('pages.home');
@@ -14,7 +15,7 @@ Route::get('/', function (Request $request) {
 
 
 Route::get('/events', function (Request $request) {
-    if($request->header('HX-REQUEST')) {
+    if ($request->header('HX-REQUEST')) {
         return view('partials.events-content');
     }
     return view('pages.events');
@@ -22,7 +23,7 @@ Route::get('/events', function (Request $request) {
 
 
 Route::get('/transaction', function (Request $request) {
-    if($request->header('HX-REQUEST')) {
+    if ($request->header('HX-REQUEST')) {
         return view('partials.transaction-content');
     }
     return view('pages.transaction');
@@ -30,7 +31,7 @@ Route::get('/transaction', function (Request $request) {
 
 
 Route::get('/profile', function (Request $request) {
-    if($request->header('HX-REQUEST')) {
+    if ($request->header('HX-REQUEST')) {
         return view('partials.profile-content');
     }
     return view('pages.profile');
@@ -41,3 +42,7 @@ Route::get('/login', [LoginController::class, 'index'])->name('login');
 
 Route::post('/signin', [LoginController::class, 'login'])->name('signin');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
+
+// In web.php
+Route::get('/error/{status}', [ErrorController::class, 'show'])->name('error');

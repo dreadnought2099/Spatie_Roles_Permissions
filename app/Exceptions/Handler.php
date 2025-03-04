@@ -13,12 +13,11 @@ class Handler extends ExceptionHandler
     {
         if ($exception instanceof AuthorizationException) {
             if ($request->header('HX-Request')) {
-                return response()->view('errors.403', ['exception' => $exception], Response::HTTP_FORBIDDEN);
+                return response()->view('errors.minimal', ['exception' => $exception], Response::HTTP_FORBIDDEN);
             }
 
-            return response()->view('errors.403', ['exception' => $exception], Response::HTTP_FORBIDDEN);
+            return response()->view('errors.minimal', ['exception' => $exception], Response::HTTP_FORBIDDEN);
         }
-
         return parent::render($request, $exception);
     }
 }
