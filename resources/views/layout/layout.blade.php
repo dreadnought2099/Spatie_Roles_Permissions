@@ -12,17 +12,14 @@
                 const statusCode = event.detail.xhr.status;
                 let errorMessage = "Something went wrong!";
 
-                // Map status codes to specific error messages
                 const errorMessages = {
                     403: "You don't have permission to access this page!",
                     404: "Page not found!",
                     500: "Internal Server Error!"
                 };
 
-                // Use the mapped message or fallback to a default one
                 errorMessage = errorMessages[statusCode] || errorMessage;
 
-                // Redirect to the error page with the appropriate status and message
                 window.location.href = `/error/${statusCode}?message=${encodeURIComponent(errorMessage)}`;
             });
         });
