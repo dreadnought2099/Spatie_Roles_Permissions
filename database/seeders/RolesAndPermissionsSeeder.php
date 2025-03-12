@@ -7,6 +7,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
+use Illuminate\Support\Facades\Hash;
 
 class RolesAndPermissionsSeeder extends Seeder
 {
@@ -30,13 +31,13 @@ class RolesAndPermissionsSeeder extends Seeder
         $user1 = User::create([
             'name' => 'admin',
             'email' => 'admin@email.com',
-            'password' => bcrypt('admin123')
+            'password' => Hash::make('admin123')
         ]);
 
         $user2 = User::create([
             'name' => 'user',
             'email' => 'user@email.com',
-            'password' => bcrypt('user123')
+            'password' => Hash::make('user123')
         ]);
 
 
